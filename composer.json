@@ -1,17 +1,17 @@
 {
-    "name": ":vendor/:package_name",
+    "name": "techenby/laravel-dashboard-github-tile",
     "description": ":package_description",
     "keywords": [
-        ":vendor",
-        ":package_name"
+        "techenby",
+        "laravel-dashboard-github-tile"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/techenby/laravel-dashboard-github-tile",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://:vendor.be",
+            "name": "Andy Newhouse",
+            "email": "hi@andymnewhouse.me",
+            "homepage": "https://andymnewhouse.me",
             "role": "Developer"
         }
     ],
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\MyTile\\": "src"
+            "Techenby\\GithubTile\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\MyTile\\Tests\\": "tests"
+            "Techenby\\GithubTile\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\MyTile\\MyTileServiceProvider"
+                "Techenby\\GithubTile\\GithubTileServiceProvider"
             ]
         }
     },
