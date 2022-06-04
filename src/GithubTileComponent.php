@@ -25,7 +25,7 @@ class GithubTileComponent extends Component
     public function getFilteredReposProperty()
     {
         return collect(GithubStore::make()->getData())
-            ->filter(function($repo) {
+            ->filter(function ($repo) {
                 return $repo['issues'] > 0 || $repo['pulls'] > 0;
             })
             ->sortByDesc('issues');

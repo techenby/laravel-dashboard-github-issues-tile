@@ -8,14 +8,14 @@ class GithubStore
 {
     private Tile $tile;
 
+    public function __construct()
+    {
+        $this->tile = Tile::firstOrCreateForName('github');
+    }
+
     public static function make()
     {
         return new static();
-    }
-
-    public function __construct()
-    {
-        $this->tile = Tile::firstOrCreateForName("github");
     }
 
     public function setData(array $data): self

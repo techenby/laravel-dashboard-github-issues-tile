@@ -18,7 +18,7 @@ class FetchDataFromApiCommand extends Command
         $repos = config('dashboard.tiles.github.repos');
 
         $data = [];
-        foreach($repos as $repo) {
+        foreach ($repos as $repo) {
             $issues = Http::withBasicAuth(config('dashboard.tiles.github.username'), config('dashboard.tiles.github.key'))
                 ->get('https://api.github.com/repos/' . $repo . '/issues')
                 ->json();
