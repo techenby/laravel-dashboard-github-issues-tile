@@ -19,14 +19,12 @@ class FetchDataFromApiCommand extends Command
 
         $data = [];
         foreach ($repos as $repo) {
-            $issues = Http::withBasicAuth(config('dashboard.tiles.github.username'), config('dashboard.tiles.github.key'))
+            $response = Http::withBasicAuth(config('dashboard.tiles.github.username'), config('dashboard.tiles.github.key'))
                 ->get('https://api.github.com/repos/' . $repo . '/issues')
                 ->json();
-            $pulls = Http::withBasicAuth(config('dashboard.tiles.github.username'), config('dashboard.tiles.github.key'))
-                ->get('https://api.github.com/repos/' . $repo . '/pulls')
-                ->json();
+            list($pulls, $issues) = collect($response)->partition(fn($issue) => isset($issue['pull_request']));
 
-            $data[$repo] = ['issues' => count($issues), 'pulls' => count($pulls)];
+            $data[$repo] = ['issues' => $issues->count(), 'pulls' => $pulls->count()];
         }
 
         GithubStore::make()->setData($data);
