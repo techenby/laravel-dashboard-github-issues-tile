@@ -1,6 +1,6 @@
 {
     "name": "techenby/laravel-dashboard-github-tile",
-    "description": ":package_description",
+    "description": "A tile for laravel dashboard for showing GitHub Issues and Pull Requests.",
     "keywords": [
         "techenby",
         "laravel-dashboard-github-tile"
