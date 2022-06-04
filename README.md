@@ -1,4 +1,4 @@
-# A short description of the tile
+# A GitHub Issues & Pull Requests tile for the Laravel Dashboard
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/techenby/laravel-dashboard-github-tile.svg?style=flat-square)](https://packagist.org/packages/techenby/laravel-dashboard-github-tile)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/techenby/laravel-dashboard-github-tile/run-tests?label=tests)](https://github.com/techenby/laravel-dashboard-github-tile/actions?query=workflow%3Arun-tests+branch%3Amaster)
