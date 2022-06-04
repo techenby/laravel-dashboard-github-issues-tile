@@ -9,7 +9,7 @@ class FetchDataFromApiCommand extends Command
 {
     protected $signature = 'dashboard:fetch-data-from-github-api';
 
-    protected $description = 'Fetch data for tile';
+    protected $description = 'Fetch issues from GitHub';
 
     public function handle()
     {
