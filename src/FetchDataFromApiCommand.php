@@ -24,7 +24,7 @@ class FetchDataFromApiCommand extends Command
                 ->json();
             list($pulls, $issues) = collect($response)->partition(fn($issue) => isset($issue['pull_request']));
 
-            $data[$repo] = ['issues' => $issues->count(), 'pulls' => $pulls->count()];
+            $data[$repo] = ['issues' => $issues->count(), 'pulls' => $pulls->count(), 'total' => count($response)];
         }
 
         GithubStore::make()->setData($data);

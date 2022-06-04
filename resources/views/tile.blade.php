@@ -1,4 +1,4 @@
-<x-dashboard-tile :position="$position">
+<x-dashboard-tile :position="$position" :refresh-interval="$refreshIntervalInSeconds">
     <div class="{{ isset($title) ? 'space-y-2' : '' }} h-full">
         @isset ($title)
             <h1 class="uppercase font-bold">
